@@ -1,0 +1,109 @@
+.game-field-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.game-header {
+    text-align: center;
+    color: white;
+}
+
+.game-title {
+    margin: 0 0 5px 0;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game-instructions {
+    color: #bbb;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.canvas-container {
+    position: relative;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.game-canvas {
+    display: block;
+    background: #1a1a1a;
+    cursor: crosshair;
+}
+
+.no-players-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+.game-stats {
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.stat-item {
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.stat-item strong {
+    color: #667eea;
+}
+
+@media (max-width: 850px) {
+    .game-canvas {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .canvas-container {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .game-stats {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-title {
+        font-size: 1.4rem;
+    }
+
+    .game-instructions {
+        font-size: 0.9rem;
+    }
+
+    .game-stats {
+        padding: 8px 15px;
+    }
+
+    .stat-item {
+        font-size: 0.8rem;
+    }
+}

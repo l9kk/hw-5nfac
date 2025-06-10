@@ -1,0 +1,115 @@
+.player-list {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.player-list-title {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.player-list-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.player-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: rgba(248, 249, 250, 0.8);
+    transition: all 0.2s ease;
+}
+
+.player-item:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateX(2px);
+}
+
+.current-player {
+    background: rgba(102, 126, 234, 0.2) !important;
+    border: 2px solid rgba(102, 126, 234, 0.5);
+    font-weight: bold;
+}
+
+.player-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.player-name {
+    flex: 1;
+    color: #2c3e50;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player-position {
+    font-size: 0.8rem;
+    color: #666;
+    font-family: 'Courier New', monospace;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.no-players {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Scrollbar styling */
+.player-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.player-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.player-list::-webkit-scrollbar-thumb {
+    background: rgba(102, 126, 234, 0.5);
+    border-radius: 3px;
+}
+
+.player-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(102, 126, 234, 0.7);
+}
+
+@media (max-width: 768px) {
+    .player-list {
+        margin-bottom: 10px;
+    }
+
+    .player-item {
+        padding: 6px 8px;
+    }
+
+    .player-position {
+        font-size: 0.7rem;
+    }
+}
